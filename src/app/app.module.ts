@@ -7,6 +7,7 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { HomeComponent } from './Components/home/home.component';
 import { NavComponent } from './Components/nav/nav.component';
+import { ModalComponent } from './Components/modal/modal/modal.component';
 
 
 
@@ -16,7 +17,8 @@ import { NavComponent } from './Components/nav/nav.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    NavComponent
+    NavComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

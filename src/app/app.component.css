@@ -1,0 +1,13 @@
+@font-face {
+    font-family: Yekan;
+    font-style: normal;
+    font-weight: 100;
+    src: url("/src/assets/font/Yekan.ttf") format("ttf")
+    /* src: url("fonts/Vazir-Thin.woff") format("woff"), */
+      /* url("fonts/Vazir-Thin.ttf") format("ttf"); */
+      /* url("fonts/Vazir-Thin.woff2") format("woff2"); */
+  }
+  body {
+    font-family: Yekan;
+    font-weight: bolder;
+  }
