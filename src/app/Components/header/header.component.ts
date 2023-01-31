@@ -6,13 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-
-  showModal : boolean = false;
-
   constructor () {}
-
-
-  openModal() {
-    this.showModal = true;
-  }
 }
