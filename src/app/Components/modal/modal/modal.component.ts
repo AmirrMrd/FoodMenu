@@ -1,4 +1,5 @@
 import { Component, ElementRef, Input, OnInit } from '@angular/core';
+import { ModalService } from './modal.service';
 
 @Component({
   selector: 'app-modal',
@@ -7,26 +8,13 @@ import { Component, ElementRef, Input, OnInit } from '@angular/core';
 })
 export class ModalComponent implements OnInit {
 
-  @Input() show: boolean = false; 
 
+  showModal : boolean = false;
 
-  constructor(private el : ElementRef) {
-  }
+  constructor(private el : ElementRef , public show : ModalService) {}
 
-  
   ngOnInit () {
-    document.body.appendChild(this.el.nativeElement);
-
-
   }
 
-  open () {
 
-    this.show = !this.show
-  }
-
-  
-  close () {
-    this.show = !this.show;
-}
 }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
+import { ModalService } from './Components/modal/modal/modal.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularStore';
+  constructor(public modal: ModalService, public el: ElementRef) {
+    var elemDiv = document.createElement('div');
+    elemDiv.style.cssText = 'overflow : hidden';
+    document.body.appendChild(elemDiv);
+  }
 
 }

@@ -1,14 +1,14 @@
 
-<aside id="modalBack" class="col-lg-6" *ngIf="show" >
+<aside class="col-lg-6" *ngIf="show.isShowModal">
   
 
       <!-- modal 1 -->
       <div class="modal" tabindex="-1" style="display: block;">
-        <div class="modal-dialog">
+         <div class="modal-dialog">
         <div class="modal-content shadow">
           <div class="modal-header">
           <!-- <h5 class="modal-title">Your address</h5> -->
-          <button (click)="close()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" fdprocessedid=""></button>
+          <button (click)="show.closeModal()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" fdprocessedid=""></button>
           </div>
           <div class="modal-body">
           <form>
@@ -37,7 +37,7 @@
       </div>
       <!-- modal 1.// -->
       </aside>
-      <aside class="col-lg-6">
+      <!-- <aside class="col-lg-6"> -->
       <!-- modal 1 -->
       <!-- <div class="modal" tabindex="-1" style="display: block; position: static;">
         <div class="modal-dialog">
@@ -123,4 +123,4 @@
         <!-- modal-dialog.// -->
       <!-- </div> -->
       <!-- modal 1.// -->
-    </aside>
+    <!-- </aside> -->
