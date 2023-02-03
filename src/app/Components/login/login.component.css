@@ -1,0 +1,16 @@
+.main-form {
+    display: flex;    
+}
+
+
+.email-div {
+    display: block;
+    justify-items: center;
+    margin-left: 2%;
+}
+
+.btn-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 7px;
+}

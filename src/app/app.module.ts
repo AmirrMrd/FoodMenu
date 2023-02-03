@@ -8,6 +8,10 @@ import { HeaderComponent } from './Components/header/header.component';
 import { HomeComponent } from './Components/home/home.component';
 import { NavComponent } from './Components/nav/nav.component';
 import { ModalComponent } from './Components/modal/modal/modal.component';
+import { RegisterComponent } from './Components/register/register.component';
+import { LoginComponent } from './Components/login/login.component';
+
+
 
 
 
@@ -18,7 +22,9 @@ import { ModalComponent } from './Components/modal/modal/modal.component';
     FooterComponent,
     HomeComponent,
     NavComponent,
-    ModalComponent
+    ModalComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
