@@ -7,8 +7,8 @@
             fdprocessedid=""></button>
         </div>
         <div class="modal-body">
-          <app-register></app-register>
-          <!-- <app-login></app-login> -->
+          <app-login *ngIf="show.isShowLoginModal"></app-login>
+          <app-register *ngIf="show.isShowRegisterModal"></app-register>
         </div>
       </div>
     </div>

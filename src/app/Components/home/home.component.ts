@@ -9,8 +9,5 @@ import { ModalService } from '../modal/modal/modal.service';
 export class HomeComponent {
 
   constructor () {}
-
   
-
-
 }

@@ -5,21 +5,26 @@ import { Injectable } from '@angular/core';
 })
 export class ModalService {
 
-  isShowModal : boolean = false // 
+  public isShowModal : boolean = false
 
+  public isShowLoginModal : boolean = false;
+
+  public isShowRegisterModal : boolean = false;
 
   constructor() { }
 
  // باز شدن مودال
-  openModal () {
+  public openModal () {
     this.isShowModal = true;
-    //document.body.style.overflow = 'hidden';
+    this.isShowLoginModal = true;
+    document.body.style.overflow = 'hidden';
   }
 
   //بستن مودال
-  closeModal () {
+  public closeModal () {
     this.isShowModal = false;
-    //document.body.style.overflow = 'visible';
+    this.isShowRegisterModal = false;
+    document.body.style.overflow = 'visible';
   }
 
 }

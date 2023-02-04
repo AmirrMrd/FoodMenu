@@ -8,10 +8,7 @@ import { ModalService } from './modal.service';
 })
 export class ModalComponent implements OnInit {
 
-
-  showModal : boolean = false;
-
-  constructor(private el : ElementRef , public show : ModalService) {}
+  constructor(protected show : ModalService) {}
 
   ngOnInit () {
   }
