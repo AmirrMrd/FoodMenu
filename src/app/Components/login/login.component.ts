@@ -23,10 +23,11 @@ export class LoginComponent {
 
 
   login (data : FormGroup) {   
-    this._forms._emailOrMobile = this.loginForm.controls['emailOrMobile'].value,
-    this._forms._password = this.loginForm.controls['password'].value
-    this.loginSer.login(this._forms)
-    console.log(this._forms)
+    this._forms.emailOrMobile = this.loginForm.controls['emailOrMobile'].value;
+    this._forms.password = this.loginForm.controls['password'].value;
+    this.loginSer.login(this._forms);
+    this.loginForm.reset();
+    this.modal.isShowModal = false;
   }
  
 
