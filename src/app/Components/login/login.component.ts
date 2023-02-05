@@ -11,7 +11,7 @@ import { LoginService } from './login.service';
 })
 export class LoginComponent {
 
-  public _forms: loginFormModel = new loginFormModel;
+  public _loginFormModel: loginFormModel = new loginFormModel;
 
   constructor (private modal : ModalService , private loginSer : LoginService) {}
 
@@ -23,9 +23,9 @@ export class LoginComponent {
 
 
   login (data : FormGroup) {   
-    this._forms.emailOrMobile = this.loginForm.controls['emailOrMobile'].value;
-    this._forms.password = this.loginForm.controls['password'].value;
-    this.loginSer.login(this._forms);
+    this._loginFormModel.emailOrMobile = this.loginForm.controls['emailOrMobile'].value;
+    this._loginFormModel.password = this.loginForm.controls['password'].value;
+    this.loginSer.login(this._loginFormModel);
     this.loginForm.reset();
     this.modal.isShowModal = false;
   }
