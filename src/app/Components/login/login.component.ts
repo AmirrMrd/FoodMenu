@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ModalService } from '../modal/modal/modal.service';
-import { FormGroup , FormControl } from '@angular/forms';
+import { FormGroup , FormControl, Validators, EmailValidator } from '@angular/forms';
 import { loginFormModel } from 'src/app/model/loginFormModel';
 import { LoginService } from './login.service';
 
@@ -16,7 +16,7 @@ export class LoginComponent {
   constructor (private modal : ModalService , private loginSer : LoginService) {}
 
   loginForm = new FormGroup({
-    emailOrMobile : new FormControl(),
+    emailOrMobile : new FormControl('' , Validators.minLength(4)),
     password : new FormControl ()
   });
 

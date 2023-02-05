@@ -1,10 +1,12 @@
+import { Validator } from "@angular/forms";
+
 export class loginFormModel {
     id? : number;
-    emailOrMobile : string;
+    emailOrMobile : string | null;
     password : string;
     constructor (){
-        this.emailOrMobile = '';
-        this.password = '';
+        this.emailOrMobile = ''
+        this.password = ''
     }
 
     

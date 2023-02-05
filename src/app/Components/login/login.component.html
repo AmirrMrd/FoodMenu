@@ -2,7 +2,7 @@
     <div class="main-form"> 
       <div class="emailOrMobile-div" style="width: 100%;">
         <span><label for="emailOrMobile">شماره تلفن یا ایمیل</label></span>
-        <span><input type="text" class="form-control" name="emailOrMobile" id="emailOrMobile" formControlName="emailOrMobile"></span>
+        <span><input type="text" class="form-control" name="emailOrMobile" id="emailOrMobile" formControlName="emailOrMobile" required ></span>
       </div>
       <div class="password-div" style="width: 100%;">
         <span><label for="password">رمز عبور</label></span>
@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="btn-div">
-      <button class="btn btn-success" type="submit">ورود</button>
+      <button class="btn btn-success" type="submit" [disabled]="!this.loginForm.valid">ورود</button>
       <button class="btn btn-primary" (click)="register()">ثبت نام</button>
     </div>
     <label>
