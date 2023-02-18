@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { ModalService } from '../modal/modal/modal.service';
-import { FormGroup , FormControl, Validators, EmailValidator } from '@angular/forms';
-import { loginFormModel } from 'src/app/model/loginFormModel';
+import { FormGroup , FormControl } from '@angular/forms';
 import { LoginService } from './login.service';
+import { RegisterService } from '../register/register.service';
+import { IUser } from 'src/app/model/IUser';
 
 @Component({
   selector: 'app-login',
@@ -11,21 +12,38 @@ import { LoginService } from './login.service';
 })
 export class LoginComponent {
 
-  public _loginFormModel: loginFormModel = new loginFormModel;
+  selectedEmail : string | undefined = '';
+  
+  userRegisteredOk : IUser | undefined;
 
-  constructor (private modal : ModalService , private loginSer : LoginService) {}
+  userr : IUser = {
+    firstName : '',
+    lastName : '',
+    emailOrMobile : '',
+    password : '',
+    confirmPassword : ''
+   }
 
+   
+  constructor (private modal : ModalService , private loginSer : LoginService , private reGister : RegisterService) {}
+
+  ngOnInit () {}
+
+  
   loginForm = new FormGroup({
-    emailOrMobile : new FormControl('' , Validators.minLength(4)),
+    emailOrMobile : new FormControl(),
     password : new FormControl ()
   });
 
+  
 
-
-  login (data : FormGroup) {   
-    this._loginFormModel.emailOrMobile = this.loginForm.controls['emailOrMobile'].value;
-    this._loginFormModel.password = this.loginForm.controls['password'].value;
-    this.loginSer.login(this._loginFormModel);
+   
+   
+  login () {   
+    this.userr.emailOrMobile = this.loginForm.controls['emailOrMobile'].value;
+    this.userr.password = this.loginForm.controls['password'].value;
+    this.loginSer.login(this.userr);
+    // console.log(this.user)
     this.loginForm.reset();
     this.modal.isShowModal = false;
   }

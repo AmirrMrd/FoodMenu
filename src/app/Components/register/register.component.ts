@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { ModalService } from '../modal/modal/modal.service';
-import { registerFormModel } from 'src/app/model/registerFormModel';
 import { FormControl, FormGroup } from '@angular/forms';
 import { RegisterService } from './register.service';
+import { IUser } from 'src/app/model/IUser';
 
 @Component({
   selector: 'app-register',
@@ -10,10 +10,18 @@ import { RegisterService } from './register.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
+
 constructor(public modal : ModalService , private registerSer : RegisterService) {}
 
+  userSubmit : IUser = {
+    firstName : '',
+    lastName : '',
+    emailOrMobile : '',
+    password : '',
+    confirmPassword : ''
 
-    public _registerFormModel = new registerFormModel();
+  }
+
 
     registerForm = new FormGroup ({
       firstName : new FormControl(),
@@ -23,13 +31,14 @@ constructor(public modal : ModalService , private registerSer : RegisterService)
       confirmPassword : new FormControl()
     })
 
-  register (data : FormGroup) {
-    this._registerFormModel.firstName = this.registerForm.controls['firstName'].value;
-    this._registerFormModel.lastName = this.registerForm.controls['lastName'].value;
-    this._registerFormModel.emailOrMobile = this.registerForm.controls['emailOrMobile'].value;
-    this._registerFormModel.password = this.registerForm.controls['password'].value;
-    this._registerFormModel.confirmPassword = this.registerForm.controls['confirmPassword'].value;
-    this.registerSer.register(this._registerFormModel);
+  register () {
+    this.userSubmit.firstName = this.registerForm.controls['firstName'].value;
+    this.userSubmit.lastName = this.registerForm.controls['lastName'].value;
+    this.userSubmit.emailOrMobile = this.registerForm.controls['emailOrMobile'].value;
+    this.userSubmit.password = this.registerForm.controls['password'].value;
+    this.userSubmit.confirmPassword = this.registerForm.controls['confirmPassword'].value;
+    this.registerSer.register(this.userSubmit);
+    console.log(this.userSubmit)
     this.registerForm.reset();
     this.modal.isShowRegisterModal = false;
     this.modal.isShowLoginModal = true;

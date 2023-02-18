@@ -1,18 +1,23 @@
 import { Injectable } from '@angular/core';
-import { registerFormModel } from 'src/app/model/registerFormModel';
+import { IUser } from 'src/app/model/IUser';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class RegisterService {
 
-  newUsers : registerFormModel[] = [];
+  newUsers : IUser[] =  [];
+
+
 
   constructor() { }
 
 
-  register (model : registerFormModel) {
-    this.newUsers.push(model);
-    console.log(this.newUsers);
+  register (userSubmit : IUser) {
+    this.newUsers.push(userSubmit);
+    console.log(this.newUsers)
   }
+
+
 }

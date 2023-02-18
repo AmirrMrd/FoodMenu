@@ -1,8 +1,8 @@
-<form [formGroup]="loginForm" (ngSubmit)="login(loginForm)">                            <!-- لاگین فرم -->
+<form [formGroup]="loginForm" (ngSubmit)="login()">                            <!-- لاگین فرم -->
     <div class="main-form"> 
       <div class="emailOrMobile-div" style="width: 100%;">
         <span><label for="emailOrMobile">شماره تلفن یا ایمیل</label></span>
-        <span><input type="text" class="form-control" name="emailOrMobile" id="emailOrMobile" formControlName="emailOrMobile" required ></span>
+        <span><input type="text" class="form-control" name="emailOrMobile" id="emailOrMobile" formControlName="emailOrMobile"></span>
       </div>
       <div class="password-div" style="width: 100%;">
         <span><label for="password">رمز عبور</label></span>

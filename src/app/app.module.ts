@@ -11,6 +11,7 @@ import { ModalComponent } from './Components/modal/modal/modal.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { LoginComponent } from './Components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProfileComponent } from './Components/profile/profile.component';
 
 
 
@@ -25,7 +26,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     NavComponent,
     ModalComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

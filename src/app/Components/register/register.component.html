@@ -1,25 +1,25 @@
-<form [formGroup]="registerForm" (ngSubmit)="register(registerForm)">                                                 <!-- فرم ثبت نام -->
+<form [formGroup]="registerForm" (ngSubmit)="register()">                                                 <!-- فرم ثبت نام -->
     <div class="main-form">
       <div class="firstName-div" style="width: 100%;">
         <span><label for="firstName">نام</label></span>
-        <span><input type="text" class="form-control" name="firstName" id="firstName" formControlName="firstName"></span>
+        <span><input type="text" class="form-control" id="firstName" formControlName="firstName"></span>
       </div>
       <div class="lastName-div" style="width: 100%;">
         <span><label for="lastName">نام خانوادگی</label></span>
-        <input type="text" class="form-control" name="lastName" id="lastName" formControlName="lastName">
+        <input type="text" class="form-control"  id="lastName" formControlName="lastName">
       </div>
     </div>
     <div class="emailOrMobile-div" style="width: 100%;margin-top: 6px;">
       <span><label for="emailOrMobile">ایمیل یا شماره موبایل</label></span>
-      <input type="text" class="form-control" name="emailOrMobile" id="emailOrMobile" formControlName="emailOrMobile">
+      <input type="text" class="form-control" id="emailOrMobile" formControlName="emailOrMobile">
     </div>
     <div class="password-div" style="width: 100%; margin-top: 6px;">
       <span><label for="password">رمز عبور</label></span>
-      <input type="text" class="form-control" name="password" id="password" formControlName="password">
+      <input type="password" class="form-control" id="password" formControlName="password">
     </div>
     <div class="confirmPassword-div" style="width: 100%; margin-top: 6px;">
       <span><label for="confirmPassword">تکرار رمز عبور</label></span>
-      <input type="text" class="form-control" name="confirmPassword" id="confirmPassword" formControlName="confirmPassword">
+      <input type="password" class="form-control" id="confirmPassword" formControlName="confirmPassword">
     </div>
     <div class="btn-div">
       <button class="btn btn-success" (click)="backToLoginForm()">ورود</button>
