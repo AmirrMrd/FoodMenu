@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { RegisterService } from '../register/register.service';
-import { IUser } from 'src/app/model/IUser';
+import { User } from 'src/app/model/User';
+import { ModalService } from '../modal/modal/modal.service';
+import { Router } from '@angular/router';
 
 
 
@@ -11,28 +13,30 @@ export class LoginService {
 
   userOk : boolean = false;
 
-  constructor(private register : RegisterService) { }
+  public emailOk? : string = "";
 
 
-  ngOnInit () {
-  }
+  constructor(private register : RegisterService , private modal : ModalService , private router : Router) { }
+
+
+  ngOnInit () {}
 
 
 
 
-  login(user : IUser) {
-    
-  //  if ( user.emailOrMobile === this.userTrust.emailOrMobile ) {
-  //   console.log("ok");
-  //   this.userOk = true;
-
-    
-  //  }
-  //  else 
-  //  {
-  //   this.userOk = false;
-  //   console.log("Not Ath");
-  //  }
+  login(data : User) {
+    const users = this.register.newUsers.find(x => x.emailOrMobile === data.emailOrMobile);
+   if (users) {
+    console.log("Ok");
+    console.log("OK state");
+    this.emailOk = users.emailOrMobile;
+    this.router.navigate(['/profile'])
+   }
+   else 
+   {
+    console.log("Not Ok");
+   }
+   
   }
 }
 

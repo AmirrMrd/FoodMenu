@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { IUser } from 'src/app/model/IUser';
+import { User } from 'src/app/model/User';
+
 
 
 @Injectable({
@@ -7,15 +8,15 @@ import { IUser } from 'src/app/model/IUser';
 })
 export class RegisterService {
 
-  newUsers : IUser[] =  [];
+  newUsers : User[] =  [];
 
 
 
   constructor() { }
 
 
-  register (userSubmit : IUser) {
-    this.newUsers.push(userSubmit);
+  register (newUser : User) {
+    this.newUsers.push(newUser);
     console.log(this.newUsers)
   }
 

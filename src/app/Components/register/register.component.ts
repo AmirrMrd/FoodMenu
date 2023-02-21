@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ModalService } from '../modal/modal/modal.service';
 import { FormControl, FormGroup } from '@angular/forms';
 import { RegisterService } from './register.service';
-import { IUser } from 'src/app/model/IUser';
+import { User } from 'src/app/model/User';
 
 @Component({
   selector: 'app-register',
@@ -13,7 +13,7 @@ export class RegisterComponent {
 
 constructor(public modal : ModalService , private registerSer : RegisterService) {}
 
-  userSubmit : IUser = {
+  userRegister : User = {
     firstName : '',
     lastName : '',
     emailOrMobile : '',
@@ -31,14 +31,14 @@ constructor(public modal : ModalService , private registerSer : RegisterService)
       confirmPassword : new FormControl()
     })
 
-  register () {
-    this.userSubmit.firstName = this.registerForm.controls['firstName'].value;
-    this.userSubmit.lastName = this.registerForm.controls['lastName'].value;
-    this.userSubmit.emailOrMobile = this.registerForm.controls['emailOrMobile'].value;
-    this.userSubmit.password = this.registerForm.controls['password'].value;
-    this.userSubmit.confirmPassword = this.registerForm.controls['confirmPassword'].value;
-    this.registerSer.register(this.userSubmit);
-    console.log(this.userSubmit)
+  register (registerForm : FormGroup) {
+    this.userRegister.firstName = this.registerForm.controls['firstName'].value;
+    this.userRegister.lastName = this.registerForm.controls['lastName'].value;
+    this.userRegister.emailOrMobile = this.registerForm.controls['emailOrMobile'].value;
+    this.userRegister.password = this.registerForm.controls['password'].value;
+    this.userRegister.confirmPassword = this.registerForm.controls['confirmPassword'].value;
+    this.registerSer.register(this.userRegister);
+    console.log(this.userRegister)
     this.registerForm.reset();
     this.modal.isShowRegisterModal = false;
     this.modal.isShowLoginModal = true;
