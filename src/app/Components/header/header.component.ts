@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit{
 
 
-  constructor (public modal : ModalService , public login : LoginService , private router : Router) {}
+  constructor (private router : Router) {}
 
   ngOnInit () {
   }

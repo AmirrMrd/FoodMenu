@@ -11,32 +11,33 @@ import { Router } from '@angular/router';
 })
 export class LoginService {
 
-  userOk : boolean = false;
+  userOk: boolean = false;
 
-  public emailOk? : string = "";
-
-
-  constructor(private register : RegisterService , private modal : ModalService , private router : Router) { }
+  public emailOk?: string = "";
 
 
-  ngOnInit () {}
+  constructor(private register: RegisterService, private modal: ModalService, private router: Router) { }
+
+
+  ngOnInit() { }
 
 
 
 
-  login(data : User) {
+  login(data: User) {
     const users = this.register.newUsers.find(x => x.emailOrMobile === data.emailOrMobile);
-   if (users) {
-    console.log("Ok");
-    console.log("OK state");
-    this.emailOk = users.emailOrMobile;
-    this.router.navigate(['/profile'])
-   }
-   else 
-   {
-    console.log("Not Ok");
-   }
-   
+    if (users) {
+      console.log("Ok");
+      console.log("OK state");
+      this.emailOk = users.emailOrMobile;
+      this.router.navigate(['/profile']);
+    }
+
+    
+    else {
+      console.log("Not Ok");
+    }
+
   }
 }
 

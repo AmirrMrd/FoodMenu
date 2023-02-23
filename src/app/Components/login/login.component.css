@@ -1,5 +1,6 @@
 .main-form {
-    display: flex;    
+    display: flex;   
+    margin-top: 30px;
 }
 
 
@@ -8,9 +9,12 @@
     justify-items: center;
     margin-left: 2%;
 }
+label {
+    margin-bottom: 5px;
+}
 
 .btn-div {
     display: flex;
     justify-content: center;
-    margin-top: 7px;
+    margin-top: 40px;
 }
