@@ -12,6 +12,10 @@ export class AppComponent {
     var elemDiv = document.createElement('div');
     elemDiv.style.cssText = 'overflow : hidden';
     document.body.appendChild(elemDiv);
+    
+    
   }
+
+  
 
 }

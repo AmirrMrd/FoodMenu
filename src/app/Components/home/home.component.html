@@ -1,298 +1,338 @@
 <app-header></app-header>
-<app-nav></app-nav>
+<!-- <app-nav></app-nav> -->
 <section class="padding-y bg-light" style="position: relative;">
-    <div class="container">
-      <!-- =================== COMPONENT 1 ====================== -->
-      <div class="card bg-primary p-5" style="min-height:280px; background-size: cover; background-image: url('../../../assets/images/banners/bg-food.png');">
-      <header class="text-center mt-5">
-        <h2 class="text-white">Order food online now</h2>
-        <p class="text-white">Discover the best food and drinks in your area</p>
-      </header>
-      <form class="mx-auto w-100 mb-3" style="max-width: 720px">
-        <div class="row g-2 w-100">
+  <div class="container">
+    <form class="mx-auto w-100 mb-3" style="max-width: 720px">
+      <div class="row g-2 w-100">
         <div class="col flex-grow">
           <div class="input-group">
-          <select class="form-select" style="max-width:30%" fdprocessedid="">
-            <option>Moscow</option>
-            <option>Tashkent</option>
-            <option>New York</option>
-          </select>
-          <input type="text" placeholder="Food or cafe name" class="form-control" name="">
+            <input type="text" style="border-radius: 1%; margin-left: 1%;" placeholder="رستوران های محبوب رو پیدا کن"
+              class="form-control" name="">
+            <select class="form-select" style="max-width:15%; border-radius: 5%;" fdprocessedid="">
+              <option>تهران</option>
+              <option>رشت</option>
+              <option>اصفهان</option>
+            </select>
           </div>
         </div>
         <!-- col.// -->
         <div class="col-auto">
-          <button class="btn btn-warning" fdprocessedid=""> Find food </button>
+          <button class="btn btn-warning" fdprocessedid="">جستجو</button>
         </div>
         <!-- col.// -->
-        </div>
-        <!-- row.// -->
-      </form>
       </div>
-      <!-- =================== COMPONENT 1 .// ================== -->
-      <br>
-      <br>
-      <!-- =================== COMPONENT 2 ====================== -->
-      <div class="card">
+      <!-- row.// -->
+    </form>
+    <!-- =================== COMPONENT 1 ====================== -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../../../assets/images/banners/bg-cafe.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="../../../assets/images/banners/bg-cafe.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="../../../assets/images/banners/bg-cafe.png" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- =================== COMPONENT 1 .// ================== -->
+    <br>
+    <br>
+    <!-- =================== COMPONENT 2 ====================== -->
+    <div style="display: flex; justify-content: center;">
+      <h3>دسته های محبوب</h3>
+    </div>
+    <br>
+    <br>
+    <div class="card">
       <div class="content-body">
         <nav class="row gy-4">
-        <div class="col-xl col-lg-2 col-md-3 col-4">
-          <a href="#" class="item-link text-center">
-          <span class="icon icon-lg mb-2 rounded-3">
-            <img width="42" height="42" src="../../../assets/images/icons/hamburger.svg">
-          </span>
-          <span class="text"> Fast food </span>
-          </a>
-        </div>
-        <!-- col.// -->
-        <div class="col-xl col-lg-2 col-md-3 col-4">
-          <a href="#" class="item-link text-center">
-          <span class="icon icon-lg mb-2 rounded-3">
-            <img width="42" height="42" src="../../../assets/images/icons/steak.svg">
-          </span>
-          <span class="text"> Steaks </span>
-          </a>
-        </div>
-        <!-- col.// -->
-        <div class="col-xl col-lg-2 col-md-3 col-4">
-          <a href="#" class="item-link text-center">
-          <span class="icon icon-lg mb-2 rounded-3">
-            <img width="42" height="42" src="../../../assets/images/icons/chicken.svg">
-          </span>
-          <span class="text"> Chickens </span>
-          </a>
-        </div>
-        <!-- col.// -->
-        <div class="col-xl col-lg-2 col-md-3 col-4">
-          <a href="#" class="item-link text-center">
-          <span class="icon icon-lg mb-2 rounded-3">
-            <img width="42" height="42" src="../../../assets/images/icons/pizza.svg">
-          </span>
-          <span class="text"> Pizzas </span>
-          </a>
-        </div>
-        <!-- col.// -->
-        <div class="col-xl col-lg-2 col-md-3 col-4">
-          <a href="#" class="item-link text-center">
-          <span class="icon icon-lg mb-2 rounded-3">
-            <img width="42" height="42" src="../../../assets/images/icons/cake.svg">
-          </span>
-          <span class="text"> Sweets </span>
-          </a>
-        </div>
-        <!-- col.// -->
-        <div class="col-xl col-lg-2 col-md-3 col-4">
-          <a href="#" class="item-link text-center">
-          <span class="icon icon-lg mb-2 rounded-3">
-            <img width="42" height="42" src="../../../assets/images/icons/porridge.svg">
-          </span>
-          <span class="text"> National food </span>
-          </a>
-        </div>
-        <!-- col.// -->
-        <div class="col-xl col-lg-2 col-md-3 col-4">
-          <a href="#" class="item-link text-center">
-          <span class="icon icon-lg mb-2 rounded-3">
-            <img width="42" height="42" src="../../../assets/images/icons/cup.svg">
-          </span>
-          <span class="text"> Cold drink </span>
-          </a>
-        </div>
-        <!-- col.// -->
-        <div class="col-xl col-lg-2 col-md-3 col-4">
-          <a href="#" class="item-link text-center">
-          <span class="icon icon-lg mb-2 rounded-3">
-            <img width="42" height="42" src="../../../assets/images/icons/chicken.svg">
-          </span>
-          <span class="text"> Grills </span>
-          </a>
-        </div>
-        <!-- col.// -->
-        <div class="col-xl col-lg-2 col-md-3 col-4">
-          <a href="#" class="item-link text-center">
-          <span class="icon icon-lg mb-2 rounded-3">
-            <img width="42" height="42" src="../../../assets/images/icons/apple.svg">
-          </span>
-          <span class="text"> Fruits </span>
-          </a>
-        </div>
-        <!-- col.// -->
+          <div class="col-xl col-lg-2 col-md-3 col-4">
+            <a href="#" class="item-link text-center">
+              <span class="icon icon-lg mb-2 rounded-3">
+                <img width="42" height="42" src="../../../assets/images/icons/hamburger.svg">
+              </span>
+              <span class="text">فست فود</span>
+            </a>
+          </div>
+          <!-- col.// -->
+          <div class="col-xl col-lg-2 col-md-3 col-4">
+            <a href="#" class="item-link text-center">
+              <span class="icon icon-lg mb-2 rounded-3">
+                <img width="42" height="42" src="../../../assets/images/icons/steak.svg">
+              </span>
+              <span class="text">استیک</span>
+            </a>
+          </div>
+          <!-- col.// -->
+          <div class="col-xl col-lg-2 col-md-3 col-4">
+            <a href="#" class="item-link text-center">
+              <span class="icon icon-lg mb-2 rounded-3">
+                <img width="42" height="42" src="../../../assets/images/icons/chicken.svg">
+              </span>
+              <span class="text">سوخاری</span>
+            </a>
+          </div>
+          <!-- col.// -->
+          <div class="col-xl col-lg-2 col-md-3 col-4">
+            <a href="#" class="item-link text-center">
+              <span class="icon icon-lg mb-2 rounded-3">
+                <img width="42" height="42" src="../../../assets/images/icons/pizza.svg">
+              </span>
+              <span class="text">پیتزا</span>
+            </a>
+          </div>
+          <!-- col.// -->
+          <div class="col-xl col-lg-2 col-md-3 col-4">
+            <a href="#" class="item-link text-center">
+              <span class="icon icon-lg mb-2 rounded-3">
+                <img width="42" height="42" src="../../../assets/images/icons/chicken.svg">
+              </span>
+              <span class="text">گریل</span>
+            </a>
+          </div>
+          <!-- col.// -->
+          <div class="col-xl col-lg-2 col-md-3 col-4">
+            <a href="#" class="item-link text-center">
+              <span class="icon icon-lg mb-2 rounded-3">
+                <img width="42" height="42" src="../../../assets/images/icons/porridge.svg">
+              </span>
+              <span class="text">عذای های سالم</span>
+            </a>
+          </div>
+          <!-- col.// -->
+          <div class="col-xl col-lg-2 col-md-3 col-4">
+            <a href="#" class="item-link text-center">
+              <span class="icon icon-lg mb-2 rounded-3">
+                <img width="42" height="42" src="../../../assets/images/icons/cup.svg">
+              </span>
+              <span class="text">چای و قهوه</span>
+            </a>
+          </div>
+          <!-- col.// -->
+          <div class="col-xl col-lg-2 col-md-3 col-4">
+            <a href="#" class="item-link text-center">
+              <span class="icon icon-lg mb-2 rounded-3">
+                <img width="42" height="42" src="../../../assets/images/icons/cake.svg ">
+              </span>
+              <span class="text">کیک و شیرینی</span>
+            </a>
+          </div>
+          <!-- col.// -->
+          <div class="col-xl col-lg-2 col-md-3 col-4">
+            <a href="#" class="item-link text-center">
+              <span class="icon icon-lg mb-2 rounded-3">
+                <img width="42" height="42" src="../../../assets/images/icons/apple.svg">
+              </span>
+              <span class="text">آبمیوه و بستنی</span>
+            </a>
+          </div>
+          <!-- col.// -->
         </nav>
       </div>
       <!-- card-body.// -->
-      </div>
-      <!-- card.// -->
-      <!-- =================== COMPONENT 2 .// ================== -->
-      <br>
-      <br>
-      <!-- =================== COMPONENT 3 ====================== -->
-      <div class="row">
+    </div>
+    <!-- card.// -->
+    <!-- =================== COMPONENT 2 .// ================== -->
+    <br>
+    <br>
+    <!-- =================== COMPONENT 3 ====================== -->
+    <div style="display: flex; justify-content: center;">
+      <h3>رستوران های برتر</h3>
+    </div>
+    <br>
+    <br>
+    <div class="row">
       <div class="col-lg-4 col-md-6">
         <article class="card card-product-grid">
-        <a href="#">
-          <img src="../../../assets/images/posts/food1.png" height="200" class="card-img-top" alt="product image">
-        </a>
-        <div class="card-body pt-0">
-          <div class="float-end mt-n5">
-          <img class="img-sm rounded-3 obj-contain border" src="../../../assets/images/brands/cafe-logo1.png" width="72" height="72">
+          <a href="#">
+            <img src="../../../assets/images/posts/food1.png" height="200" class="card-img-top" alt="product image">
+          </a>
+          <div class="card-body pt-0">
+            <div class="float-end mt-n5">
+              <img class="img-sm rounded-3 obj-contain border" src="../../../assets/images/brands/cafe-logo1.png"
+                width="72" height="72">
+            </div>
+            <div class="pt-3 pe-5">
+              <h6 class="card-title mb-0">
+                <a style="margin-right: 10px;">سوخاری دی</a>
+              </h6>
+              <p class="mb-1 text-muted" style="margin-right: 35px; font-size: small;">شعبه مطهری</p>
+              <span class="badge bg-warning">
+                <i class="fa fa-star"></i> 4.7 </span>
+              <span class="text-success small ms-2" style="margin-right: 3px;">
+                <i class="fa fa-truck"></i> زمان ارسال : 25 دقیقه</span>
+            </div>
           </div>
-          <div class="pt-3 pe-5">
-          <h6 class="card-title mb-0">
-            <a href="#">KFC Moscow</a>
-          </h6>
-          <p class="mb-1 text-muted">Fast food, halal food</p>
-          <span class="badge bg-warning">
-            <i class="fa fa-star"></i> 4.7 </span>
-          <span class="text-success small ms-2">
-            <i class="fa fa-truck"></i> 5-10 min, free </span>
-          </div>
-        </div>
-        <!-- card-body.// -->
+          <!-- card-body.// -->
         </article>
       </div>
       <!-- col.// -->
       <div class="col-lg-4 col-md-6">
         <article class="card card-product-grid">
-        <a href="#">
-          <img src="../../../assets/images/posts/food2.png" height="200" class="card-img-top" alt="product image">
-        </a>
-        <div class="card-body pt-0">
-          <div class="float-end mt-n5">
-          <img class="img-sm rounded-3 obj-contain border" src="../../../assets/images/brands/cafe-logo2.png" width="72" height="72">
+          <a href="#">
+            <img src="../../../assets/images/posts/food2.png" height="200" class="card-img-top" alt="product image">
+          </a>
+          <div class="card-body pt-0">
+            <div class="float-end mt-n5">
+              <img class="img-sm rounded-3 obj-contain border" src="../../../assets/images/brands/cafe-logo2.png"
+                width="72" height="72">
+            </div>
+            <div class="pt-3 pe-5">
+              <h6 class="card-title mb-0">
+                <a style="margin-right: 10px;">پیتزا نایت</a>
+              </h6>
+              <p class="mb-1 text-muted" style="margin-right: 35px; font-size: small;">شعبه شریعتی</p>
+              <span class="badge bg-warning">
+                <i class="fa fa-star"></i> 4.7 </span>
+              <span class="text-success small ms-2" style="margin-right: 3px;">
+                <i class="fa fa-truck"></i> زمان ارسال : 90 دقیقه</span>
+            </div>
           </div>
-          <div class="pt-3 pe-5">
-          <h6 class="card-title mb-0">
-            <a href="#">Mandi Restaurant</a>
-          </h6>
-          <p class="mb-1 text-muted"> National and european food </p>
-          <span class="badge bg-warning">
-            <i class="fa fa-star"></i> 4.9 </span>
-          <span class="text-success small ms-2">
-            <i class="fa fa-truck"></i> 5-10 min, free </span>
-          </div>
-        </div>
-        <!-- card-body.// -->
+          <!-- card-body.// -->
         </article>
       </div>
       <!-- col.// -->
       <div class="col-lg-4 col-md-6">
         <article class="card card-restaurant-grid">
-        <a href="#">
-          <img src="../../../assets/images/posts/food3.png" height="200" class="card-img-top" alt="product image">
-        </a>
-        <div class="card-body pt-0">
-          <div class="float-end mt-n5">
-          <img class="img-sm rounded-3 obj-contain border" src="../../../assets/images/brands/cafe-logo3.png" width="72" height="72">
+          <a href="#">
+            <img src="../../../assets/images/posts/food3.png" height="200" class="card-img-top" alt="product image">
+          </a>
+          <div class="card-body pt-0">
+            <div class="float-end mt-n5">
+              <img class="img-sm rounded-3 obj-contain border" src="../../../assets/images/brands/cafe-logo3.png"
+                width="72" height="72">
+            </div>
+            <div class="pt-3 pe-5">
+              <h6 class="card-title mb-0">
+                <a style="margin-right: 10px;">هوم برگر</a>
+              </h6>
+              <p class="mb-1 text-muted" style="margin-right: 35px; font-size: small;">شعبه اندرزگو</p>
+              <span class="badge bg-warning">
+                <i class="fa fa-star"></i> 4.7 </span>
+              <span class="text-success small ms-2" style="margin-right: 3px;">
+                <i class="fa fa-truck"></i> زمان ارسال : 45 دقیقه</span>
+            </div>
           </div>
-          <div class="pt-3 pe-5">
-          <h6 class="card-title mb-0">
-            <a href="#">McDonalds Tashkent</a>
-          </h6>
-          <p class="mb-1 text-muted"> Asian, american, fast food </p>
-          <span class="badge bg-warning">
-            <i class="fa fa-star"></i> 4.1 </span>
-          <span class="text-success small ms-2">
-            <i class="fa fa-truck"></i> 5-10 min, free </span>
-          </div>
-        </div>
-        <!-- card-body.// -->
+          <!-- card-body.// -->
         </article>
       </div>
       <!-- col.// -->
-      </div>
-      <!-- row.// -->
-      <!-- =================== COMPONENT 3 .// ================== -->
-      <br>
-      <br>
-      <!-- =================== COMPONENT 4 ====================== -->
-      <div class="card">
-      <header class="card-img-top overflow-hidden bg-cover" style="background-image: url('../../../assets/images/banners/bg-cafe.png');">
+    </div>
+    <!-- row.// -->
+    <!-- =================== COMPONENT 3 .// ================== -->
+    <br>
+    <br>
+    <!-- =================== COMPONENT 4 ====================== -->
+    <div class="card">
+      <header class="card-img-top overflow-hidden bg-cover"
+        style="background-image: url('../../../assets/images/banners/bg-cafe.png');">
         <div class="card-body bg-dark-50">
-        <div class="d-lg-flex align-items-end">
-          <div class="itemside mt-lg-5 flex-auto">
-          <div class="aside">
-            <img src="../../../assets/images/brands/cafe-logo2.png" class="img-md rounded-3" width="96" height="96">
+          <div class="d-lg-flex align-items-end">
+            <div class="itemside mt-lg-5 flex-auto">
+              <!-- <div class="aside">
+                <img src="../../../assets/images/brands/cafe-logo2.png" class="img-md rounded-3" width="96" height="96">
+              </div> -->
+              <div class="info">
+                <h3 class="text-white">تخفیف دار ها</h3>
+                <!-- <p class="text-white-50">National food of Uzbekistan and European foods, luxury interior</p> -->
+              </div>
+            </div>
+            <!-- <div class="flex-shrink-0 mt-3">
+              <span class="btn btn-sm btn-gray">
+                <i class="fa fa-truck"></i> 15-20 min, $7 </span>
+              <span class="btn btn-sm btn-warning">
+                <i class="fa fa-star"></i> 4.7 </span>
+              <a class="btn btn-sm btn-outline-light" href="#"> More info </a>
+            </div> -->
           </div>
-          <div class="info">
-            <p class="text-white">Moscow city</p>
-            <h3 class="text-white">McDonalds Moscow</h3>
-            <p class="text-white-50">National food of Uzbekistan and European foods, luxury interior</p>
-          </div>
-          </div>
-          <div class="flex-shrink-0 mt-3">
-          <span class="btn btn-sm btn-gray">
-            <i class="fa fa-truck"></i> 15-20 min, $7 </span>
-          <span class="btn btn-sm btn-warning">
-            <i class="fa fa-star"></i> 4.7 </span>
-          <a class="btn btn-sm btn-outline-light" href="#"> More info </a>
-          </div>
-        </div>
         </div>
         <!-- card-body.// -->
       </header>
       <div class="row g-0">
         <aside class="col-lg-3 border-end">
-        <nav class="nav flex-column nav-pills m-3">
-          <a href="#" class="nav-link active">Recommended</a>
-          <a href="#" class="nav-link">Hamburgers</a>
-          <a href="#" class="nav-link">Salads and Drinks</a>
-          <a href="#" class="nav-link">Grilled meats</a>
-          <a href="#" class="nav-link">Vegeterian foods</a>
-          <a href="#" class="nav-link">Other meals</a>
-        </nav>
+          <nav class="nav flex-column nav-pills m-3">
+            <a href="#" class="nav-link active">پیشنهاد های ویژه</a>
+            <a href="#" class="nav-link">همبرگر</a>
+            <a href="#" class="nav-link">پیش غذا و نوشیدنی</a>
+            <a href="#" class="nav-link">غذای ایرانی</a>
+            <a href="#" class="nav-link">غذای فرنگی</a>
+            <a href="#" class="nav-link">کیک و شیرینی</a>
+          </nav>
         </aside>
         <div class="col-lg-9">
-        <div class="content-body">
-          <h4 class="card-title">Recommended</h4>
-          <article class="row mb-3">
-          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12">
-            <img class="rounded w-100 obj-cover mb-3" height="140" src="../../../assets/images/items/food1.png">
+          <div class="content-body">
+            <h4 class="card-title">70% تخفیف</h4>
+            <br>
+            <article class="row mb-3">
+              <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12">
+                <img class="rounded w-100 obj-cover mb-3" height="140" src="../../../assets/images/items/food1.png">
+              </div>
+              <div class="col-xl-9 col-lg-8 col-md-8 col-sm-12">
+                <h6 class="title">پلو با گوشت آسیایی</h6>
+                <div class="price-wrap mb-2">
+                  <span class="price">155,000 هزار تومان</span>
+                </div>
+                <!-- price-wrap .// -->
+                <p class="text-muted" style="max-width: 600px">گوشت چرخ کرده ، برنج صد درصد ایرانی ، به همراه دورچین</p>
+                  <a href="#" class="btn btn-outline-primary float-end">سفارش</a>
+              </div>
+            </article>
+            <!-- itemside .// -->
+            <article class="row mb-3">
+              <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12">
+                <img class="rounded w-100 obj-cover mb-3" height="140" src="../../../assets/images/items/food2.png">
+              </div>
+              <div class="col-xl-9 col-lg-8 col-md-8 col-sm-12">
+                <div class="col-xl-9 col-lg-8 col-md-8 col-sm-12">
+                  <h6 class="title">پیتزا پپرونی</h6>
+                  <div class="price-wrap mb-2">
+                    <span class="price">255,000 هزار تومان</span>
+                  </div>
+                  <!-- price-wrap .// -->
+                  <p class="text-muted" style="max-width: 600px">پپرونی ، پنیر پارمزان ، قارچ ، ادویه ایتالیالی</p>
+                    <a href="#" class="btn btn-outline-primary float-end">سفارش</a>
+                </div>
+                <!-- price-wrap .// -->
+              </div>
+              <!-- col .// -->
+            </article>
+            <!-- itemside .// -->
           </div>
-          <div class="col-xl-9 col-lg-8 col-md-8 col-sm-12">
-            <a href="#" class="btn btn-outline-primary float-end"> Add this</a>
-            <h6 class="title">Asian Beef Pilav</h6>
-            <div class="price-wrap mb-2">
-            <span class="price">$18.90</span>
-            </div>
-            <!-- price-wrap .// -->
-            <p class="text-muted" style="max-width: 600px">Uzbek pilav cooked with chicken meat, carrot and other ingredients and some other descriptions Juicy, tender, succulent chicken</p>
-          </div>
-          </article>
-          <!-- itemside .// -->
-          <article class="row mb-3">
-          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12">
-            <img class="rounded w-100 obj-cover mb-3" height="140" src="../../../assets/images/items/food2.png">
-          </div>
-          <div class="col-xl-9 col-lg-8 col-md-8 col-sm-12">
-            <a href="#" class="btn btn-outline-primary float-end"> Add this</a>
-            <h6 class="title">Chicken Pizza </h6>
-            <div class="price-wrap mb-2">
-            <span class="price">$7.90</span>
-            <del class="text-muted"> $12.90</del>
-            <span class="ms-2 text-danger"> 15% off </span>
-            </div>
-            <!-- price-wrap .// -->
-            <p class="text-muted" style="max-width: 600px">Juicy, tender, succulent chicken strips. Served with a choice of house made dips chicken meat and rice, carrot and other ingredients</p>
-          </div>
-          <!-- col .// -->
-          </article>
-          <!-- itemside .// -->
-        </div>
         </div>
       </div>
-      </div>
-      <!-- =================== COMPONENT 4 .// ================== -->
-      <br>
-      <br>
-      <div class="p-5" style="background-color: #DBDBDB">
+    </div>
+    <!-- =================== COMPONENT 4 .// ================== -->
+    <br>
+    <br>
+    <!-- <div class="p-5" style="background-color: #DBDBDB">
       <p class="text-center m-0 text-muted">Modal window samples</p>
       <div class="row mx-auto" style="max-width: 980px;">
-      </div>
+      </div> -->
       <!-- row .// -->
-      </div>
-      <!-- p-4 .// -->
     </div>
-    <!-- container .// -->
-    
-
-    </section>
+    <!-- p-4 .// -->
+  <!-- </div> -->
+  <!-- container .// -->
+</section>
+<app-footer></app-footer>

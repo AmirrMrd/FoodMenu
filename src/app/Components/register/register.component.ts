@@ -3,6 +3,7 @@ import { ModalService } from '../modal/modal/modal.service';
 import { FormControl, FormGroup } from '@angular/forms';
 import { RegisterService } from './register.service';
 import { User } from 'src/app/model/User';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -11,7 +12,7 @@ import { User } from 'src/app/model/User';
 })
 export class RegisterComponent {
 
-constructor(public modal : ModalService , private registerSer : RegisterService) {}
+constructor(public modal : ModalService , private registerSer : RegisterService , private router : Router) {}
 
   userRegister : User = {
     firstName : '',
@@ -29,7 +30,7 @@ constructor(public modal : ModalService , private registerSer : RegisterService)
       emailOrMobile : new FormControl(),
       password : new FormControl(),
       confirmPassword : new FormControl()
-    })
+    });
 
   register (registerForm : FormGroup) {
     this.userRegister.firstName = this.registerForm.controls['firstName'].value;
@@ -38,10 +39,9 @@ constructor(public modal : ModalService , private registerSer : RegisterService)
     this.userRegister.password = this.registerForm.controls['password'].value;
     this.userRegister.confirmPassword = this.registerForm.controls['confirmPassword'].value;
     this.registerSer.register(this.userRegister);
-    console.log(this.userRegister)
+    console.log(this.userRegister);
     this.registerForm.reset();
-    this.modal.isShowRegisterModal = false;
-    this.modal.isShowLoginModal = true;
+    this.router.navigate(['/login']);
   }
 
 
