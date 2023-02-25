@@ -1,0 +1,15 @@
+.aside-div {
+    display: block;
+}
+
+.title-div{
+    display: flex;
+    justify-content: center;
+    margin-right: 35px;
+}
+
+.listMenu-div {
+    display: flex;
+    justify-content: center;
+}
+    

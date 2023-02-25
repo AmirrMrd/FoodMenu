@@ -1,128 +1,170 @@
 <footer class="section-footer bg-primary footer-dark">
-    <div class="container">
-      <section class="footer-main padding-y">
-        <div class="row">
-          <aside class="col-12 col-sm-12 col-lg-3">
+  <div class="container">
+    <section class="footer-main padding-y">
+      <div class="row">
+        <!-- <aside class="col-12 col-sm-12 col-lg-3">
             <article class="me-lg-4">
-              <p class="mt-3"> © 2021- 2022 Therichpost. <br> All rights reserved. </p>
+              <p class="mt-3">1401/01/01<br>تمامی حقوق این سایت محفوط است</p>
             </article>
-          </aside>
-          <aside class="col-6 col-sm-4 col-lg-2">
-            <h6 class="title">Store</h6>
-            <ul class="list-menu mb-4">
-              <li> <a href="#">About us</a></li>
-              <li> <a href="#">Find store</a></li>
-              <li> <a href="#">Categories</a></li>
-              <li> <a href="#">Blogs</a></li>
-            </ul>
-          </aside>
-          <aside class="col-6 col-sm-4 col-lg-2">
-            <h6 class="title">Information</h6>
-            <ul class="list-menu mb-4">
-              <li> <a href="#">Help center</a></li>
-              <li> <a href="#">Money refund</a></li>
-              <li> <a href="#">Shipping info</a></li>
-              <li> <a href="#">Refunds</a></li>
-            </ul>
-          </aside>
-          <aside class="col-6 col-sm-4  col-lg-2">
-            <h6 class="title">Support</h6>
-            <ul class="list-menu mb-4">
-              <li> <a href="#"> Help center </a></li>
-              <li> <a href="#"> Documents </a></li>
-              <li> <a href="#"> Account restore </a></li>
-              <li> <a href="#"> My Orders </a></li>
-            </ul>
-          </aside>
-          <aside class="col-12 col-sm-12 col-lg-3">
-            <h6 class="title">Newsletter</h6>
-            <p>Stay in touch with latest updates about our products and offers </p>
-    
-            <form class="mb-3">
-              <div class="input-group">
-                <input class="form-control" type="text" placeholder="Email">
-                <button class="btn btn-light" type="submit">
-                  Join
-                </button>
-              </div> <!-- input-group.// -->
-            </form>
-          </aside>
-        </div> <!-- row.// -->
-      </section>  <!-- footer-top.// -->
-    
-      <section class="footer-bottom d-flex justify-content-lg-between border-top">
-        <div>
-          <i class="fab fa-lg fa-cc-visa"></i>
-          <i class="fab fa-lg fa-cc-amex"></i>
-          <i class="fab fa-lg fa-cc-mastercard"></i>
-          <i class="fab fa-lg fa-cc-paypal"></i>
-        </div>
-        <nav class="dropup">
-            <button class="dropdown-toggle btn d-flex align-items-center py-0" type="button" data-bs-toggle="dropdown">
-              <img src="../../../assets/images/flag-usa.png" class="me-2" height="20"> 
-              <span>English</span>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" href="#">Russian</a></li>
-              <li><a class="dropdown-item" href="#">Arabic</a></li>
-              <li><a class="dropdown-item" href="#">Spanish</a></li>
-            </ul>
-        </nav>
-        
-      </section>
-    </div> <!-- container end.// -->
-    </footer>
-    
-    
-    <aside class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas_cart">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title">Your cart (3) </h5>
-          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          
-          <figure class="itemside mb-4">
-            <div class="aside">
-              <img src="../../../assets/images/items/14.png" class="border img-sm rounded">
+          </aside> -->
+        <aside class="col-6 col-sm-4 col-lg-2">
+          <div class="aside-div">
+            <div class="title-div">
+              <h6 class="title">{{information}}</h6>
             </div>
-            <figcaption class="info">
-              <a href="#" class="btn btn-icon btn-light float-end"><i class="fa fa-trash"></i></a>
-              <p> Leather Wallet for Men</p>
-              <span class="text-muted">1 x $200.95 </span> <br>
-              <strong class="price"> $400.90 </strong>
-            </figcaption>
-          </figure>
-    
-          <figure class="itemside  mb-4">
-            <div class="aside">
-              <img src="../../../assets/images/items/15.png" class="border img-sm rounded">
+            <div class="listMenu-div">
+              <ul class="list-menu mb-4">
+                <li> <a href="#">{{ support }}</a></li>
+                <li> <a href="#">{{ category }}</a></li>
+                <li> <a href="#">{{ product }}</a></li>
+                <li> <a href="#">{{ aboutUs }}</a></li>
+              </ul>
             </div>
-            <figcaption class="info">
-              <a href="#" class="btn btn-icon btn-light float-end"><i class="fa fa-trash"></i></a>
-              <p> Canon EOS 1400 Black </p>
-              <span class="text-muted">2 x $169.95 </span> <br>
-              <strong class="price"> $339.90 </strong>
-            </figcaption>
-          </figure>
-    
-          <figure class="itemside  mb-4">
-            <div class="aside">
-              <img src="../../../assets/images/items/14.png" class="border img-sm rounded">
-            </div>
-            <figcaption class="info">
-              <a href="#" class="btn btn-icon btn-light float-end"><i class="fa fa-trash"></i></a>
-              <p> Winter Jacket for men and lady </p>
-              <span class="text-muted">2 x $169.95 </span> <br>
-              <strong class="price"> $339.90 </strong>
-            </figcaption>
-          </figure>
-          <hr>
-         
-          <p class="mb-3 text-center"> Subtotal:  <strong class="text-danger">$893.00</strong>  </p>
-          <div class="mb-3">
-            <a href="#" class="btn w-100 btn-success"> Checkout </a>
           </div>
-          <p class="mb-3 text-center"> <img src="../../../assets/images/payments.png" height="22">  </p>
-    
-        </div> <!-- offcanvas-body -->
-    </aside> <!-- offcanvas -->
+        </aside>
+        <aside class="col-6 col-sm-4 col-lg-2">
+          <div class="aside-div">
+            <div class="title-div">
+              <h6 class="title">{{information}}</h6>
+            </div>
+            <div class="listMenu-div">
+              <ul class="list-menu mb-4">
+                <li> <a href="#">{{ support }}</a></li>
+                <li> <a href="#">{{ category }}</a></li>
+                <li> <a href="#">{{ product }}</a></li>
+                <li> <a href="#">{{ aboutUs }}</a></li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+        <aside class="col-6 col-sm-4 col-lg-2">
+          <div class="aside-div">
+            <div class="title-div">
+              <h6 class="title">{{information}}</h6>
+            </div>
+            <div class="listMenu-div">
+              <ul class="list-menu mb-4">
+                <li> <a href="#">{{ support }}</a></li>
+                <li> <a href="#">{{ category }}</a></li>
+                <li> <a href="#">{{ product }}</a></li>
+                <li> <a href="#">{{ aboutUs }}</a></li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+        <aside class="col-6 col-sm-4 col-lg-2">
+          <div class="aside-div">
+            <div class="title-div">
+              <h6 class="title">{{information}}</h6>
+            </div>
+            <div class="listMenu-div">
+              <ul class="list-menu mb-4">
+                <li> <a href="#">{{ support }}</a></li>
+                <li> <a href="#">{{ category }}</a></li>
+                <li> <a href="#">{{ product }}</a></li>
+                <li> <a href="#">{{ aboutUs }}</a></li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+        <aside class="col-12 col-sm-12 col-lg-3">
+          <h6 class="title"></h6>
+          <p>با وارد کردن ایمیل کد تخفیف دریافت کنید</p>
+
+          <form class="mb-3">
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="ایمیل">
+              <button class="btn btn-light" type="submit">
+                دریافت تخفیف
+              </button>
+            </div> <!-- input-group.// -->
+          </form>
+        </aside>
+      </div> <!-- row.// -->
+    </section> <!-- footer-top.// -->
+
+    <section class="footer-bottom d-flex justify-content-lg-between border-top">
+      <div>
+        <i class="fab fa-lg fa-cc-visa"></i>
+        <i class="fab fa-lg fa-cc-amex"></i>
+        <i class="fab fa-lg fa-cc-mastercard"></i>
+        <i class="fab fa-lg fa-cc-paypal"></i>
+      </div>
+      <nav class="dropup">
+        <button class="dropdown-toggle btn d-flex align-items-center py-0" type="button" data-bs-toggle="dropdown">
+          <img src="../../../assets/images/flag-usa.png" class="me-2" height="20">
+          <span>English</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="#">انگلیسی</a></li>
+          <li><a class="dropdown-item" href="#">عربی</a></li>
+          <li><a class="dropdown-item" href="#">آلمانی</a></li>
+        </ul>
+      </nav>
+
+    </section>
+  </div> <!-- container end.// -->
+</footer>
+
+
+<aside class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas_cart">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">سبد خرید شما(3) </h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+
+    <figure class="itemside mb-4">
+      <div class="aside">
+        <img src="../../../assets/images/items/14.png" class="border img-sm rounded">
+      </div>
+      <figcaption class="info">
+        <div style="display: flex;">
+        <div><p>پلو گوشت ترکی</p>
+        <span class="text-muted">تعداد : 2 عدد</span> <br>
+        <strong class="price">180,000</strong>
+      </div>
+      <div style="margin-top: 30px; width: 50%;"><a href="#" class="btn btn-icon btn-light float-end" style="margin-right: 150px;"><i class="fa fa-trash"></i></a></div>
+      </div>
+      </figcaption>
+    </figure>
+
+    <figure class="itemside  mb-4">
+      <div class="aside">
+        <img src="../../../assets/images/items/15.png" class="border img-sm rounded">
+      </div>
+      <figcaption class="info">
+        <div style="display: flex;">
+        <div><p>پلو گوشت ترکی</p>
+        <span class="text-muted">تعداد : 1 عدد</span> <br>
+        <strong class="price">250,000</strong>
+      </div>
+      <div style="margin-top: 30px; width: 50%;"><a href="#" class="btn btn-icon btn-light float-end" style="margin-right: 150px;"><i class="fa fa-trash"></i></a></div>
+      </div>
+      </figcaption>
+    </figure>
+
+    <figure class="itemside  mb-4">
+      <div class="aside">
+        <img src="../../../assets/images/items/14.png" class="border img-sm rounded">
+      </div>
+      <figcaption class="info">
+        <div style="display: flex;">
+        <div><p>پلو گوشت ترکی</p>
+        <span class="text-muted">تعداد : 5 عدد</span> <br>
+        <strong class="price">150,000</strong>
+      </div>
+      <div style="margin-top: 30px; width: 50%;"><a href="#" class="btn btn-icon btn-light float-end" style="margin-right: 150px;"><i class="fa fa-trash"></i></a></div>
+      </div>
+      </figcaption>
+    </figure>
+    <hr>
+
+    <p class="mb-3 text-center"> مبلغ قابل پرداخت: <strong class="text-danger">554,000</strong> </p>
+    <div class="mb-3">
+      <a href="#" class="btn w-100 btn-success">پرداخت</a>
+    </div>
+    <p class="mb-3 text-center"> <img src="../../../assets/images/payments.png" height="22"> </p>
+
+  </div> <!-- offcanvas-body -->
+</aside> <!-- offcanvas -->

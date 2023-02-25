@@ -42,9 +42,7 @@ export class LoginComponent {
 
    
    
-  login (loginForm : FormGroup) {   
-    
-    
+  login (loginForm : FormGroup) {
     // this.member.emailOrMobile = this.loginForm.controls['emailOrMobile'].value;
     // this.member.password = this.loginForm.controls['password'].value;
     this.loginSer.login(loginForm.value);
