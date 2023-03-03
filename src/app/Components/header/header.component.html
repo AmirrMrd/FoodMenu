@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row gy-3 align-items-center">
         <div class="col-lg-2 col-sm-4 col-4">
-          <a href="http://sepidz.com" class="navbar-brand text-success font-weight-bold">
+          <a href="#" class="navbar-brand text-success font-weight-bold">
             Online Orders | سفارش آنلاین
           </a> 
         </div>
@@ -12,8 +12,8 @@
             <a class="btn btn-light" [routerLink]="'/login'">
               <div><i class="fa fa-user" ></i><span class="ms-1 d-none d-sm-inline-block"> عضویت | ورود</span></div>
             </a>
-            <a href="#" class="btn btn-light">
-              <i class="fa fa-heart"></i><span class="ms-1 d-none d-sm-inline-block">موردعلاقه ها</span>
+            <a class="btn btn-light">
+              <i class="fa fa-heart"></i><span class="ms-1 d-none d-sm-inline-block" [routerLink]="'/brands'">موردعلاقه ها</span>
             </a>
             <a data-bs-toggle="offcanvas" href="#offcanvas_cart" class="btn btn-light">
               <i class="fa fa-shopping-cart"></i><span class="ms-1">سبد خرید</span>

@@ -1,0 +1,37 @@
+<app-header></app-header>
+<br>
+
+<div class="container">
+  <div class="row">
+    <div
+      class="col-xs-12 col-sm-4 col-md-4 col-lg-4"
+      *ngFor="let item of brandsItems"
+    >
+      <div class="card card-small">
+        <div class="thumbnail">
+          <img
+            alt="Opt alp thumbnail"
+            src="../../../assets/images/posts/food1.png"
+          />
+          <a href="#">
+            <div class="thumb-cover"></div>
+          </a>
+        </div>
+        <div class="card-info">
+            <div class="card-info-Detail">
+          <div class="brand-Name">
+            <a href="#">
+              <h3>{{ item.brandName }}</h3>
+            </a>
+          </div>
+          <div class="brand-IpPort">
+            <a href="#">
+              {{ item.brandPortNumber }} : {{ item.brandIpAddress }}
+            </a>
+          </div>
+        </div>
+    </div>
+      </div>
+    </div>
+  </div>
+</div>

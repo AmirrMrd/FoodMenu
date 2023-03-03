@@ -12,6 +12,7 @@ import { RegisterComponent } from './Components/register/register.component';
 import { LoginComponent } from './Components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './Components/profile/profile.component';
+import { BrandsComponent } from './Components/brands/brands.component';
 
 
 
@@ -27,7 +28,8 @@ import { ProfileComponent } from './Components/profile/profile.component';
     ModalComponent,
     RegisterComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    BrandsComponent
   ],
   imports: [
     BrowserModule,

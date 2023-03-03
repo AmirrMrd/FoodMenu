@@ -23,7 +23,7 @@ export class LoginComponent {
 
   
   public member : User = {
-    firstName :  '',
+    firstName : '', 
     lastName : '',
     emailOrMobile : '',
     password : '',

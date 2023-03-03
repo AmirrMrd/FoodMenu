@@ -3,7 +3,6 @@ import { RegisterService } from '../register/register.service';
 import { User } from 'src/app/model/User';
 import { ModalService } from '../modal/modal/modal.service';
 import { Router } from '@angular/router';
-import { ProfileService } from '../profile/profile.service';
 
 
 
