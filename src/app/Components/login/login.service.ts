@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class LoginService {
 
-  userOk: boolean = false;
+  public userOk: boolean = false;
 
   public emailOk?: string = "";
 
@@ -22,9 +22,10 @@ export class LoginService {
   ngOnInit() { }
 
 
+  
 
 
-  login(data: User) {
+  public login(data: User) {
     const users = this.register.newUsers.find(x => x.emailOrMobile === data.emailOrMobile);
     if (users) {
       console.log("Ok");
@@ -33,7 +34,6 @@ export class LoginService {
       this.router.navigate(['/profile']);
     }
 
-    
     else {
       console.log("Not Ok");
     }

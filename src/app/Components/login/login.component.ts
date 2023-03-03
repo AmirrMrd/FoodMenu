@@ -5,6 +5,10 @@ import { LoginService } from './login.service';
 import { RegisterService } from '../register/register.service';
 import { User } from 'src/app/model/User';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+
+
+
 
 
 @Component({
@@ -20,6 +24,13 @@ export class LoginComponent {
     password : new FormControl ()
   });
 
+  public getuser : Object = {
+    firstName: '',
+    lastName: '',
+    emailOrMobile: '',
+    password: '',
+    confirmPassword: ''
+  }
 
   
   public member : User = {
@@ -34,26 +45,40 @@ export class LoginComponent {
    
   constructor (private modal : ModalService , private loginSer : LoginService ,
      private reGister : RegisterService,
-     private router : Router) {}
+     private router : Router,
+     private http : HttpClient)  {  }
 
-  ngOnInit () {}
 
-  
+     
+
+
+  ngOnInit () {
+    this.http.get(`https://localhost:7020/api/user`).subscribe( response => {
+      this.getuser = response;
+      console.log(this.getuser);
+    },_error => {
+      console.log('Error Dad');
+    });  
+  }
+
+
+
 
    
    
-  login (loginForm : FormGroup) {
+  public login (loginForm : FormGroup) {
     // this.member.emailOrMobile = this.loginForm.controls['emailOrMobile'].value;
     // this.member.password = this.loginForm.controls['password'].value;
     this.loginSer.login(loginForm.value);
     this.loginForm.reset();
     this.modal.isShowModal = false;
+    console.log(this.getuser)
   }
  
 
 
 
-  register () {
+  public register () {
     this.router.navigate(['/register'])
     // this.modal.isShowLoginModal = false;
     // this.modal.isShowRegisterModal = true;
