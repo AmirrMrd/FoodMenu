@@ -53,16 +53,14 @@ export class LoginComponent {
 
 
   ngOnInit () {
-    this.http.get(`https://localhost:7020/api/user`).subscribe( response => {
-      this.getuser = response;
-      console.log(this.getuser);
-    },_error => {
-      console.log('Error Dad');
-    });  
+    this.http.get(`https://api-bdc.net/data/client-info`).subscribe(
+      {
+        next : ((val) => console.log(val)),
+        error : ((error) => console.log(error)),
+        complete : (() => console.log('Its Ok subscribe'))
+      }
+    ); 
   }
-
-
-
 
    
    
