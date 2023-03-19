@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { FormGroup , FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AccountService } from 'src/app/Services/account.service';
-import { User } from 'src/app/model/User';
 
 @Component({
   selector: 'app-login',
@@ -18,25 +17,19 @@ export class LoginComponent {
   });
 
 
-
+ 
   constructor ( private router : Router, private accountSer : AccountService)  {  }
+  
   
   ngOnInit () { } 
 
-
-  public login () {
+  userISOk = null;
+  
+  public submitForm () {
     const emailOrMobile = this.loginForm.controls['emailOrMobile'].value;
     const password = this.loginForm.controls['password'].value;
-    this.accountSer.loginUser(emailOrMobile , password).subscribe({
-      next(value) {
-        console.log(value);
-      },
-      error(err) {
-        console.log(err);
-      },
-      complete() {
-        console.log("OK");
-      },
+    this.accountSer.loginUser(emailOrMobile , password).subscribe((data) => {
+      this.accountSer.loginIn(data , emailOrMobile);
     });
   }
  
@@ -47,7 +40,7 @@ export class LoginComponent {
     this.router.navigate(['/register'])
     // this.modal.isShowLoginModal = false;
     // this.modal.isShowRegisterModal = true;
-  }
+  } 
 
   }
   

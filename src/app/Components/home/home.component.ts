@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ModalService } from '../modal/modal/modal.service';
 
 @Component({
   selector: 'app-home',
@@ -9,5 +8,10 @@ import { ModalService } from '../modal/modal/modal.service';
 export class HomeComponent {
 
   constructor () {}
+
+
   
+  
+
 }
+ 
