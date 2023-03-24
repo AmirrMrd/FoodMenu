@@ -36,7 +36,8 @@ export class AccountService {
 
   registerUSer<User> (data : User) : Observable<any> {
     const userJson = JSON.stringify(data);
-    return this.http.post<User>(this.apiUrl,userJson,httpOptions);
+    const url = `${this.apiUrl}/${'register'}`;
+    return this.http.post<User>(url,userJson,httpOptions);
   }
 
   // GetTokenUSer(data : string) : Observable<any> {

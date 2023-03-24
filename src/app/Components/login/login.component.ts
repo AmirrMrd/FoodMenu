@@ -47,8 +47,11 @@ export class LoginComponent {
       }
     });
    const emailJson = JSON.stringify(emailOrMobile);
+   debugger;
     localStorage.setItem( 'email' , emailJson);
-    console.log(localStorage); 
+    console.log('name : ' , localStorage); 
+    debugger;
+    console.log('name : ' , localStorage); 
   }
 
 

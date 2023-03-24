@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, OnDestroy } from '@angular/core';
 import { ModalService } from './Components/modal/modal/modal.service';
 
 @Component({
@@ -6,8 +6,10 @@ import { ModalService } from './Components/modal/modal/modal.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnDestroy {
+  
   title = 'angularStore';
+
   constructor(public modal: ModalService, public el: ElementRef) {
     var elemDiv = document.createElement('div');
     elemDiv.style.cssText = 'overflow : hidden';
@@ -16,6 +18,11 @@ export class AppComponent {
     
   }
 
+
+  ngOnDestroy(): void { }
+
   
 
 }
+
+

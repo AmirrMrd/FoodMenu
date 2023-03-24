@@ -1,1 +1,34 @@
+<header class="section-header" style="background-color: rgb(221, 221, 221);">
+    <section class="header-main">
+      <div class="container">
+        <div class="row gy-3 align-items-center">
+          <div class="col-lg-2 col-sm-4 col-4">
+            <a href="#" class="navbar-brand text-success font-weight-bold">
+              Online Orders | سفارش آنلاین
+            </a> 
+          </div>
+          <div class="order-lg-last col-lg-5 col-sm-8 col-8">
+            <div class="float-end">
+              <!-- <a *ngIf="this.userLogined[0] == null" class="btn btn-light" [routerLink]="'/login'">
+                <div><i class="fa fa-user" ></i><span class="ms-1 d-none d-sm-inline-block"> عضویت | ورود</span></div>
+              </a> -->
+              <a  class="btn btn-light" [routerLink]="'/login'" style="margin-right: .5rem;">
+                <div ><i class="fa fa-user" ></i><span class="ms-1 d-none d-sm-inline-block"></span></div>
+              </a>
+              <a class="btn btn-light" style="margin-right: .5rem;">
+                <i class="fa fa-heart"></i><span class="ms-1 d-none d-sm-inline-block" [routerLink]="'/brands'">موردعلاقه ها</span>
+              </a>
+              <a data-bs-toggle="offcanvas" href="#offcanvas_cart" class="btn btn-light" style="margin-right: .5rem;">
+                <i class="fa fa-shopping-cart"></i><span class="ms-1">سبد خرید</span>
+              </a>
+            </div>
+          </div>
+  
+          <div class="col-lg-5 col-md-12 col-12">
+  
+          </div> 
+        </div> 
+      </div> 
+    </section> 
+  </header>
 <router-outlet></router-outlet>
