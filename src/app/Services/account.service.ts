@@ -39,6 +39,11 @@ export class AccountService {
     return this.http.post<User>(this.apiUrl,userJson,httpOptions);
   }
 
+  // GetTokenUSer(data : string) : Observable<any> {
+  //   const userJson = JSON.stringify(data);
+  //   return this.http.post<string>(this.apiUrl,userJson,httpOptions);
+  // }
+
   loginUser<User> (email : string , password : string): Observable<any> {
     // const emailJson = JSON.stringify(email);
     // const passwordJson = JSON.stringify(password);

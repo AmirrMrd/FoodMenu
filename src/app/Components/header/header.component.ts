@@ -1,17 +1,34 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit{
 
+export class HeaderComponent implements OnInit , OnDestroy{
 
-  constructor (private router : Router) {}
-
-  ngOnInit () {
+  public userLogined : any = '';
+  constructor (private router : ActivatedRoute) {
+    
   }
+
+
+
+ 
+  ngOnInit () { 
+    localStorage.getItem('email');
+    console.log(localStorage); 
+    this.userLogined = localStorage.getItem('email');
+    const user = JSON.parse(this.userLogined)
+    console.log(user);
+   }
   
+
+
+  ngOnDestroy() {
+    localStorage.removeItem;
+  }
+
 }
