@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { EventEmitter, Injectable, Output } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { EventEmitter, Injectable, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { User } from '../model/User';
@@ -15,8 +15,9 @@ const httpOptions = {
   providedIn: 'root'
 })
 
-export class AccountService {
+export class AccountService implements OnInit {
 
+  public users: User[] = []
   
   @Output() user: EventEmitter<User> = new EventEmitter();
   protected apiUrl : string;
@@ -24,6 +25,9 @@ export class AccountService {
   constructor(private http : HttpClient , private router : Router) {
     this.apiUrl = environment.baseUrl;
    }
+  ngOnInit(): void {
+    this.getAllUser().subscribe((data) => { this.users.push(data) });
+  }
 
   getAllUser<User> () : Observable<any> {
     return this.http.get<User>(this.apiUrl , httpOptions);
@@ -61,10 +65,10 @@ export class AccountService {
   
   loginIn(data : number , emailOrMobile : string) {
     if(data == 1) {
-      this.router.navigateByUrl('');
+      this.router.navigateByUrl('../../');
       this.getUserByUsername(emailOrMobile).subscribe((data) => {
         this.user.emit(data);
-      })
+      });
     }
     else return console.log("Not access");
     

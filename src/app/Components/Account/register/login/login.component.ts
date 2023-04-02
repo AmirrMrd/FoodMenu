@@ -30,8 +30,7 @@ export class LoginComponent {
 
 
   ngOnInit() {
-    this.accountSer.getAllUser().subscribe((data) => { this.users.push(data) });
-    console.log(this.users);
+    
   }
 
 
@@ -46,12 +45,11 @@ export class LoginComponent {
         )
       }
     });
-   const emailJson = JSON.stringify(emailOrMobile);
-   debugger;
+    const emailJson = JSON.stringify(emailOrMobile);
     localStorage.setItem( 'email' , emailJson);
-    console.log('name : ' , localStorage); 
-    debugger;
-    console.log('name : ' , localStorage); 
+ 
+  //   console.log('name : ' , localStorage); 
+  //   console.log('name : ' , localStorage); 
   }
 
 

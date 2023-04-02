@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/model/User';
 import { ProfileService } from './profile.service';
+import { AccountService } from 'src/app/Services/account.service';
 
 @Component({
   selector: 'app-profile',
@@ -9,22 +10,15 @@ import { ProfileService } from './profile.service';
 })
 export class ProfileComponent implements OnInit {
 
- public user : User = {
-  firstName : '',
-  lastName : '',
-  emailOrMobile : '',
-  password : '',
-  confirmPassword : ''
- }
-
-  constructor( public profile : ProfileService ) {
+  Users : User[] = []
+  constructor( public profile : ProfileService , private accountSer : AccountService ) {
   }
 
   ngOnInit(): void { 
-    this.user = this.profile.userExist;
-    console.log("get user in ts Ok");
-    console.log(this.user);
-    console.log("ngOninit get user OK")
+    this.accountSer.getAllUser().subscribe(data => {
+      this.Users = data;
+      console.log(this.Users);
+    });
   }
 
 

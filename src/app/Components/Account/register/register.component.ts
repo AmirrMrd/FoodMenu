@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ModalService } from '../modal/modal/modal.service';
+import { ModalService } from '../../modal/modal/modal.service';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AccountService } from 'src/app/Services/account.service';
@@ -43,7 +43,7 @@ constructor(public modal : ModalService , private accountSer : AccountService , 
       },
     });
     this.registerForm.reset();
-    this.router.navigate(['/login']);
+    this.router.navigate(['../login']);
   }
 
   backToLoginForm () {
